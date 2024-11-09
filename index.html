@@ -57,8 +57,18 @@
         </div>
 
         <div class="quiz-box" id="quiz-body">
-          <h1>Progress: </h1>
+          <h1 class="percent-bar">Progress: <span class="percent" id="progress">0%</span></h1>
           
+          <div class="question-body">
+            <h3 class="question-title">Q1: Do you like video games?</h3>
+            <form id="question-one">
+              <label for="Q1O1">Yes</label>
+              <input id="Q1O1" type="radio" name="option" value="yes">
+              <label for="Q1O2">No</label>
+              <input id="Q1O2" type="radio" name="option" value="no">
+            </form> 
+            <button type="button" id="question-one-button">Next</button>
+          </div>
         </div>
       </div>
 
@@ -74,7 +84,7 @@
 
           <div class="col-md-6">
             <div class="result-box">
-              
+
             </div>
           </div>
         </div>
