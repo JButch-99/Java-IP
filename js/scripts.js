@@ -2,6 +2,7 @@ window.addEventListener("load", function() {
   const confirmButton = document.getElementById("confirm-button");
   const question1Button = document.getElementById("question-one-button");
   const question2Button = document.getElementById("question-two-button");
+  const question3Button = document.getElementById("question-three-button");
   
   function startQuiz(e) {
     e.preventDefault();
@@ -26,9 +27,21 @@ window.addEventListener("load", function() {
   }
 
   function questionOne() {
-    alert("Test");
+    question2Button.disabled = false;
+    question1Button.disabled = true;
+    document.querySelector("span#progress").innerHTML = "25%";
+  }
+
+  function questionTwo() {
+    document.querySelector("span#progress").innerHTML = "50%";
+    question2Button.disabled = true;
+  }
+
+  function questionThree() {
+
   }
 
   confirmButton.addEventListener("click", startQuiz);
   question1Button.addEventListener("click", questionOne);
+  question2Button.addEventListener("click", questionTwo);
 })

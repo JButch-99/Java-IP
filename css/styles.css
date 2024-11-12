@@ -139,10 +139,11 @@ ul {
 
 .question-title {
   font-size: 150%;
-  text-decoration-line: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 1px;
+  border-bottom: solid black 3px;
+  padding: 1%;
+  background-color: white;
+  margin: 3% 0%;
+  border-radius: 25px;
 }
 
 .body-4 {
