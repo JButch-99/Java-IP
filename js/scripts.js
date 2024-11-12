@@ -5,6 +5,7 @@ window.addEventListener("load", function() {
   const question3Button = document.getElementById("question-three-button");
   const question4Button = document.getElementById("question-four-button");
   const question5Button = document.getElementById("question-five-button");
+  
   function startQuiz(e) {
     e.preventDefault();
     confirmQuiz();
@@ -55,13 +56,24 @@ window.addEventListener("load", function() {
     document.querySelector("span#progress").innerHTML = "80%";
 
     question4Button.disabled = true;
-    question4Form.disabled = true;
+    question5Button.disabled = false;
   }
 
   function questionFive() {
-    document.querySelector("span#progress").innerHTML = "100%"
+    disableFive();
+    revealed();
+    
+    function disableFive() {
+      document.querySelector("span#progress").innerHTML = "100%"
+      question5Button.disabled = true;
+    }
 
-    question5Button.disabled = true;
+    function revealed() {
+      let revealed = document.getElementById("revealed-body");
+      revealed.setAttribute("class", "hidden");
+      revealed.removeAttribute("class");
+      revealed.setAttribute("class", "reveal-body");
+    }
   }
 
   confirmButton.addEventListener("click", startQuiz);
@@ -69,4 +81,5 @@ window.addEventListener("load", function() {
   question2Button.addEventListener("click", questionTwo);
   question3Button.addEventListener("click", questionThree);
   question4Button.addEventListener("click", questionFour);
+  question5Button.addEventListener("click", questionFive);
 })

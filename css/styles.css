@@ -18,6 +18,11 @@ ul {
   display: block;
 }
 
+button:hover {
+  background-color: black;
+  color: white;
+}
+
 .grid-body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -155,10 +160,12 @@ ul {
 }
 
 .reveal {
-  font-size: x-large;
+  font-size: 140%;
   border: ridge gold 10px;
   margin: 3%;
-  padding: 10%;
+  padding: 3%;
+  font-weight:600;
+  font-family:monospace;
   font-size: 150%;
 }
 
@@ -173,6 +180,6 @@ ul {
   margin: 2%;
   border: solid black 3px;
   padding: 3%;
-  background-color: white;;
+  background-color: white;
 }
 
