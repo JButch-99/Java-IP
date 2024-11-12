@@ -3,7 +3,8 @@ window.addEventListener("load", function() {
   const question1Button = document.getElementById("question-one-button");
   const question2Button = document.getElementById("question-two-button");
   const question3Button = document.getElementById("question-three-button");
-  
+  const question4Button = document.getElementById("question-four-button");
+  const question5Button = document.getElementById("question-five-button");
   function startQuiz(e) {
     e.preventDefault();
     confirmQuiz();
@@ -24,24 +25,48 @@ window.addEventListener("load", function() {
 
   function disableButton() {
     question2Button.disabled = true;
+    question3Button.disabled = true;
+    question4Button.disabled = true;
+    question5Button.disabled = true;
   }
-
+  
   function questionOne() {
-    question2Button.disabled = false;
+    document.querySelector("span#progress").innerHTML = "20%";
+    
     question1Button.disabled = true;
-    document.querySelector("span#progress").innerHTML = "25%";
+    question2Button.disabled = false;
   }
 
   function questionTwo() {
-    document.querySelector("span#progress").innerHTML = "50%";
+    document.querySelector("span#progress").innerHTML = "40%";
+
     question2Button.disabled = true;
+    question3Button.disabled = false;
   }
 
   function questionThree() {
+    document.querySelector("span#progress").innerHTML = "60%";
 
+    question3Button.disabled = true;
+    question4Button.disabled = false;
+  }
+
+  function questionFour() {
+    document.querySelector("span#progress").innerHTML = "80%";
+
+    question4Button.disabled = true;
+    question4Form.disabled = true;
+  }
+
+  function questionFive() {
+    document.querySelector("span#progress").innerHTML = "100%"
+
+    question5Button.disabled = true;
   }
 
   confirmButton.addEventListener("click", startQuiz);
   question1Button.addEventListener("click", questionOne);
   question2Button.addEventListener("click", questionTwo);
+  question3Button.addEventListener("click", questionThree);
+  question4Button.addEventListener("click", questionFour);
 })

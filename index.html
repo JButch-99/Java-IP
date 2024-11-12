@@ -50,7 +50,7 @@
           <div class="confirm-section">
             <form>
               <label for="confirm-box">Click for confirmation</label>
-              <input type="checkbox" id="confirm-box" name="check" required>
+              <input type="checkbox" id="confirm-box" name="check">
               <button type="submit" id="confirm-button">Confirm</button>
             </form>
           </div>
@@ -90,6 +90,34 @@
               <input id="Q302" type="radio" name="option" value="2">
             </form>
             <button type="button" id="question-three-button">Confirm</button>
+          </div>
+
+          <div class="question-body">
+            <h3 class="question-title">Q4: What do you wish to do?</h3>
+            <select name="options" id="question-four" required>
+              <option value="none">--Please select an option--</option>
+              <option value="game">Game Developer</option>
+              <option value="web">Web Developer</option>
+              <option value="soft">Software Developer</option>
+              <option value="casual">Casual Developer</option>
+            </select>
+            <button type="button" id="question-four-button">Confirm</button>
+          </div>
+
+          <div class="question-body">
+            <h3 class="question-title">Q5: Do you like challenges?</h3>
+            <form id="question-five">
+              <label for="Q501">Yes</label>
+              <input type="radio" id="Q501" name="option" value="1">
+              <label for="Q502">No</label>
+              <input type="radio" id="Q502" name="option" value="2">
+            </form>
+            <button type="button" id="question-five-button">Confirm</button>
+          </div>
+
+          <div class="reveal-body ">
+            <h3 class="question-title">Ready to see your results?</h3>
+            <button type="button" class="reveal" id="reveal-button">Show your results</button>
           </div>
         </div>
       </div>

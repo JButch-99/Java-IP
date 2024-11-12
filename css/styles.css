@@ -140,10 +140,26 @@ ul {
 .question-title {
   font-size: 150%;
   border-bottom: solid black 3px;
+  border-top: solid darkblue 3px;
   padding: 1%;
   background-color: white;
   margin: 3% 0%;
   border-radius: 25px;
+}
+
+.reveal-body {
+  background-color: crimson;
+  border-radius: 25px;
+  border: solid black 3px;
+  margin: 0% 2%;
+}
+
+.reveal {
+  font-size: x-large;
+  border: ridge gold 10px;
+  margin: 3%;
+  padding: 10%;
+  font-size: 150%;
 }
 
 .body-4 {
