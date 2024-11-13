@@ -78,15 +78,17 @@ window.addEventListener("load", function() {
   }
 
   function showResults() {
-    let radioOne = document.querySelector("input[name='option']:checked").value;
-    let radioTwo = document.querySelector("input[name='option-2']:checked").value;
-    let radioThree = document.querySelector("input[name='option-3']:checked").value;
-    let selectFour = document.getElementById("question-four").value;
-    let radioFour = document.querySelector("input[name='option-4']:checked").value;
+    let radioOne = parseInt(document.querySelector("input[name='option']:checked").value);
+    let radioTwo = parseInt(document.querySelector("input[name='option-2']:checked").value);
+    let radioThree = parseInt(document.querySelector("input[name='option-3']:checked").value);
+    let select = document.getElementById("question-four").value;
+    let radioFour = parseInt(document.querySelector("input[name='option-4']:checked").value);
 
     const radioSum = (radioOne + radioTwo + radioThree + radioFour);
 
-    alert(radioSum);
+    if (4 <= radioSum || select === "game" || select === "soft" ) {
+      
+    } 
   }
 
   confirmButton.addEventListener("click", startQuiz);

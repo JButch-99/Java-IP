@@ -183,3 +183,38 @@ button:hover {
   background-color: white;
 }
 
+.result-text {
+  border: solid black 3px;
+  padding: 1%;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.result-head {
+  background-color: bisque;
+  text-align: left;
+  padding: 1%;
+  margin: 1% 1%;
+  border: solid grey 1px;
+}
+
+.head-box {
+  border: solid black 3px;
+  background-color: gray;
+  padding: 0% 2%;
+  color: white;
+  -webkit-text-stroke-width: 1.75px;
+  -webkit-text-stroke-color: black;
+}
+
+.demo-photo {
+  max-width: 100%;
+  max-height: auto;
+  border: solid black 3px;
+}
+
+.text-box {
+  border: solid black 3px;
+  text-align: center;
+  background-color:tan
+}
