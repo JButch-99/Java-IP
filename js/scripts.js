@@ -5,6 +5,7 @@ window.addEventListener("load", function() {
   const question3Button = document.getElementById("question-three-button");
   const question4Button = document.getElementById("question-four-button");
   const question5Button = document.getElementById("question-five-button");
+  const revealButton = document.getElementById("reveal-button");
   
   function startQuiz(e) {
     e.preventDefault();
@@ -20,7 +21,7 @@ window.addEventListener("load", function() {
     if (confirm.checked) {
       cover.setAttribute("class", "hidden");
       quizBody.removeAttribute("class", "hidden");
-      quizBody.setAttribute("class", "quiz-box")
+      quizBody.setAttribute("class", "quiz-box");
     }
   }
 
@@ -76,10 +77,23 @@ window.addEventListener("load", function() {
     }
   }
 
+  function showResults() {
+    let radioOne = document.querySelector("input[name='option']:checked").value;
+    let radioTwo = document.querySelector("input[name='option-2']:checked").value;
+    let radioThree = document.querySelector("input[name='option-3']:checked").value;
+    let selectFour = document.getElementById("question-four").value;
+    let radioFour = document.querySelector("input[name='option-4']:checked").value;
+
+    const radioSum = (radioOne + radioTwo + radioThree + radioFour);
+
+    alert(radioSum);
+  }
+
   confirmButton.addEventListener("click", startQuiz);
   question1Button.addEventListener("click", questionOne);
   question2Button.addEventListener("click", questionTwo);
   question3Button.addEventListener("click", questionThree);
   question4Button.addEventListener("click", questionFour);
   question5Button.addEventListener("click", questionFive);
+  revealButton.addEventListener("click", showResults);
 })
