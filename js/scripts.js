@@ -83,12 +83,20 @@ window.addEventListener("load", function() {
     let radioThree = parseInt(document.querySelector("input[name='option-3']:checked").value);
     let select = document.getElementById("question-four").value;
     let radioFour = parseInt(document.querySelector("input[name='option-4']:checked").value);
+    const resultOne = document.getElementById("result-one");
 
     const radioSum = (radioOne + radioTwo + radioThree + radioFour);
 
-    if (4 <= radioSum || select === "game" || select === "soft" ) {
-      
-    } 
+    if (4 === radioSum && select === "game" || 4 === radioSum && select === "web" ) {
+      resultOne.setAttribute("class", "hidden");
+      resultOne.removeAttribute("class");
+      resultOne.setAttribute("class", "result-text");
+    } else if (radioSum >= 5 && 6 >= radioSum || select === "soft") {
+      alert("test");
+      console.log(select);
+    } else {
+      alert(select);
+    }
   }
 
   confirmButton.addEventListener("click", startQuiz);
