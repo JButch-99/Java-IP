@@ -84,6 +84,8 @@ window.addEventListener("load", function() {
     let select = document.getElementById("question-four").value;
     let radioFour = parseInt(document.querySelector("input[name='option-4']:checked").value);
     const resultOne = document.getElementById("result-one");
+    const resultTwo = document.getElementById("result-two");
+    const resultThree = document.getElementById("result-three");
 
     const radioSum = (radioOne + radioTwo + radioThree + radioFour);
 
@@ -92,10 +94,13 @@ window.addEventListener("load", function() {
       resultOne.removeAttribute("class");
       resultOne.setAttribute("class", "result-text");
     } else if (radioSum >= 5 && 6 >= radioSum || select === "soft") {
-      alert("test");
-      console.log(select);
+      resultTwo.setAttribute("class", "hidden");
+      resultTwo.removeAttribute("class");
+      resultTwo.setAttribute("class", "result-text");
     } else {
-      alert(select);
+      resultThree.setAttribute("class", "hidden");
+      resultThree.removeAttribute("class");
+      resultThree.setAttribute("class", "result-text");
     }
   }
 

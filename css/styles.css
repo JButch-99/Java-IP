@@ -12,10 +12,14 @@ h1 {
   font-family: sans-serif;
 }
 
-ul {
+.list {
   padding: 1px;
   margin: auto;
   display: block;
+}
+
+li {
+  text-align: left;
 }
 
 button:hover {
