@@ -98,10 +98,10 @@ window.addEventListener("load", function() {
     resultTwo.setAttribute("class", "hidden");
     resultThree.setAttribute("class", "hidden");
 
-    if (4 === radioSum && selectValue === "game" || 4 === radioSum && selectValue === "casual") {
+    if (radioSum === 4 || selectValue === "game" || selectValue === "web") {
       resultOne.removeAttribute("class");
       resultOne.setAttribute("class", "result-text");
-    } else if (radioSum >= 5 && 6 >= radioSum && selectValue === "soft" || 6 >= radioSum && selectValue === "web") {
+    } else if (radioSum >= 5 && 6 >= radioSum || selectValue === "soft") {
       resultTwo.removeAttribute("class");
       resultTwo.setAttribute("class", "result-text");
     } else {
