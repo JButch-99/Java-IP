@@ -42,11 +42,15 @@ button:hover {
 
 
 .heading-box {
-  background-color: white;
-  margin: 5%;
-  padding: 5%;
+  background-color: darkblue;
+  margin: 4% 2%;
+  padding: 1%;
   border-radius: 50px;
   border: solid black 3px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1.75px;
+  color: white;
+  font-size: 225%;
 }
 
 .credit {
@@ -64,6 +68,13 @@ button:hover {
   border: solid black 3px;
   background-color: burlywood;
   border: solid black 3px;
+}
+
+.setting {
+  display: block;
+  margin: 0% auto;
+  font-size: 200%;
+  padding: 0% 5%;
 }
 
 .body-3 {
@@ -123,7 +134,7 @@ button:hover {
 
 .quiz-cover {
   background-color: lightgreen;
-  margin: 2% 5%;
+  margin: 12% 5%;
   padding: 5%;
   border: solid black 5px;
   border-radius: 25px ;

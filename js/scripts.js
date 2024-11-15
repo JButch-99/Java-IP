@@ -6,7 +6,13 @@ window.addEventListener("load", function() {
   const question4Button = document.getElementById("question-four-button");
   const question5Button = document.getElementById("question-five-button");
   const revealButton = document.getElementById("reveal-button");
+  const resetButton = document.getElementById("reset-button");
   
+
+  function resetPage() {
+    location.reload();
+  }
+
   function startQuiz(e) {
     e.preventDefault();
     confirmQuiz();
@@ -89,11 +95,11 @@ window.addEventListener("load", function() {
 
     const radioSum = (radioOne + radioTwo + radioThree + radioFour);
 
-    if (4 === radioSum && select === "game" || 4 === radioSum && select === "web" ) {
+    if (4 === radioSum || select === "web" || select === "game" || select === "soft") {
       resultOne.setAttribute("class", "hidden");
       resultOne.removeAttribute("class");
       resultOne.setAttribute("class", "result-text");
-    } else if (radioSum >= 5 && 6 >= radioSum || select === "soft") {
+    } else if (radioSum >= 5 && 6 >= radioSum) {
       resultTwo.setAttribute("class", "hidden");
       resultTwo.removeAttribute("class");
       resultTwo.setAttribute("class", "result-text");
@@ -102,8 +108,11 @@ window.addEventListener("load", function() {
       resultThree.removeAttribute("class");
       resultThree.setAttribute("class", "result-text");
     }
+
+    revealButton.removeEventListener("click", showResults);
   }
 
+  resetButton.addEventListener("click", resetPage);
   confirmButton.addEventListener("click", startQuiz);
   question1Button.addEventListener("click", questionOne);
   question2Button.addEventListener("click", questionTwo);
