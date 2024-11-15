@@ -17,27 +17,27 @@ window.addEventListener("load", function() {
     e.preventDefault();
     confirmQuiz();
     disableButton();
-  }
 
-  function confirmQuiz() {
-    let confirm = document.getElementById("confirm-box");
-    const cover = document.getElementById("cover");
-    const quizBody = document.getElementById("quiz-body");
-    
-    if (confirm.checked) {
-      cover.setAttribute("class", "hidden");
-      quizBody.removeAttribute("class", "hidden");
-      quizBody.setAttribute("class", "quiz-box");
+    function confirmQuiz() {
+      let confirm = document.getElementById("confirm-box");
+      const cover = document.getElementById("cover");
+      const quizBody = document.getElementById("quiz-body");
+      
+      if (confirm.checked) {
+        cover.setAttribute("class", "hidden");
+        quizBody.removeAttribute("class", "hidden");
+        quizBody.setAttribute("class", "quiz-box");
+      }
     }
+
+    function disableButton() {
+      question2Button.disabled = true;
+      question3Button.disabled = true;
+      question4Button.disabled = true;
+      question5Button.disabled = true;
+    }  
   }
 
-  function disableButton() {
-    question2Button.disabled = true;
-    question3Button.disabled = true;
-    question4Button.disabled = true;
-    question5Button.disabled = true;
-  }
-  
   function questionOne() {
     document.querySelector("span#progress").innerHTML = "20%";
     
@@ -87,29 +87,27 @@ window.addEventListener("load", function() {
     let radioOne = parseInt(document.querySelector("input[name='option']:checked").value);
     let radioTwo = parseInt(document.querySelector("input[name='option-2']:checked").value);
     let radioThree = parseInt(document.querySelector("input[name='option-3']:checked").value);
-    let select = document.getElementById("question-four").value;
     let radioFour = parseInt(document.querySelector("input[name='option-4']:checked").value);
+    let selectValue = document.getElementById("question-four").value;
     const resultOne = document.getElementById("result-one");
     const resultTwo = document.getElementById("result-two");
     const resultThree = document.getElementById("result-three");
-
     const radioSum = (radioOne + radioTwo + radioThree + radioFour);
 
-    if (4 === radioSum || select === "web" || select === "game" || select === "soft") {
-      resultOne.setAttribute("class", "hidden");
+    resultOne.setAttribute("class", "hidden");
+    resultTwo.setAttribute("class", "hidden");
+    resultThree.setAttribute("class", "hidden");
+
+    if (4 === radioSum && selectValue === "game" || 4 === radioSum && selectValue === "casual") {
       resultOne.removeAttribute("class");
       resultOne.setAttribute("class", "result-text");
-    } else if (radioSum >= 5 && 6 >= radioSum) {
-      resultTwo.setAttribute("class", "hidden");
+    } else if (radioSum >= 5 && 6 >= radioSum && selectValue === "soft" || 6 >= radioSum && selectValue === "web") {
       resultTwo.removeAttribute("class");
       resultTwo.setAttribute("class", "result-text");
     } else {
-      resultThree.setAttribute("class", "hidden");
       resultThree.removeAttribute("class");
       resultThree.setAttribute("class", "result-text");
     }
-
-    revealButton.removeEventListener("click", showResults);
   }
 
   resetButton.addEventListener("click", resetPage);
