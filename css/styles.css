@@ -12,6 +12,11 @@ h1 {
   font-family: sans-serif;
 }
 
+.description {
+  font-weight: 675;
+  color: goldenrod;
+}
+
 .list {
   padding: 1px;
   margin: auto;

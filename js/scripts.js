@@ -68,14 +68,14 @@ window.addEventListener("load", function() {
 
   function questionFive() {
     disableFive();
-    revealed();
+    showButton();
     
     function disableFive() {
       document.querySelector("span#progress").innerHTML = "100%"
       question5Button.disabled = true;
     }
 
-    function revealed() {
+    function showButton() {
       let revealed = document.getElementById("revealed-body");
       revealed.setAttribute("class", "hidden");
       revealed.removeAttribute("class");
