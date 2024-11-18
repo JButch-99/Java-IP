@@ -12,6 +12,11 @@ h1 {
   font-family: sans-serif;
 }
 
+.description {
+  font-weight: 675;
+  color: goldenrod;
+}
+
 .list {
   padding: 1px;
   margin: auto;
@@ -222,7 +227,7 @@ button:hover {
   -webkit-text-stroke-color: black;
 }
 
-.demo-photo {
+.result-photo {
   max-width: 100%;
   max-height: auto;
   border: solid black 3px;
@@ -231,5 +236,5 @@ button:hover {
 .text-box {
   border: solid black 3px;
   text-align: center;
-  background-color:tan
+  background-color:tan;
 }
