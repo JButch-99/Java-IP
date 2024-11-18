@@ -40,5 +40,5 @@ _This is a quiz made to demonstrate to Fidgetech my understanding of JavaScript.
 
 ## License
 
-[MIT](#)
+[MIT](https://github.com/JButch-99/Java-IP/blob/main/LICENSE.txt)
 
